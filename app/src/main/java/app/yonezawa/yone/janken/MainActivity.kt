@@ -11,23 +11,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         gooButton.setOnClickListener {
             player.text = "あなたの手はグーです"
             val number: Int = Random.nextInt(3)
 
             when (number) {
                 0 ->{
-                    cpu.text = "相手の手はグーです"
+                     //cpu.setText("相手の手はグーです";
+                    cpu.setImageResource(R.drawable.goo)
                     result.text= "引き分けです"
                     result.setTextColor(Color.parseColor("#8a000000"))
                 }
                 1 ->{
-                    cpu.text = "相手の手はチョキです"
+                    //cpu.setText ("相手の手はチョキです");
+                    cpu.setImageResource(R.drawable.choki)
                     result.text= "あなたの勝ちです"
                     result.setTextColor(Color.parseColor("#FF0000"))
                 }
                 2 ->{
-                    cpu.text = "相手の手はパーです"
+                    //cpu.setText("相手の手はパーです");
+                    cpu.setImageResource(R.drawable.paa)
                     result.text= "あなたの負けです"
                     result.setTextColor(Color.parseColor("#2196f3"))
                 }
@@ -42,17 +46,20 @@ class MainActivity : AppCompatActivity() {
 
             when (number) {
                 0 ->{
-                    cpu.text = "相手の手はグーです"
+                    //cpu.setText("相手の手はグーです");
+                    cpu.setImageResource(R.drawable.goo)
                     result.text= "あなたの負けです"
                     result.setTextColor(Color.parseColor("#8a000000"))
                 }
                 1 ->{
-                    cpu.text = "相手の手はチョキです"
+                    //cpu.setText("相手の手はチョキです");
+                    cpu.setImageResource(R.drawable.choki)
                     result.text= "引き分けです"
                     result.setTextColor(Color.parseColor("#f44336"))
                 }
                 2 ->{
-                    cpu.text = "相手の手はパーです"
+                    //cpu.setText("相手の手はパーです");
+                    cpu.setImageResource(R.drawable.paa)
                     result.text= "あなたの勝ちです"
                     result.setTextColor(Color.parseColor("#FF0000"))
                 }
@@ -62,22 +69,25 @@ class MainActivity : AppCompatActivity() {
 
         }
         paaButton.setOnClickListener {
-            player.text = "あなたの手はパーです"
+             //cpu.setText("あなたの手はパーです");
             val number: Int = Random.nextInt(3)
 
             when (number) {
                 0 ->{
-                    cpu.text = "相手の手はグーです"
+                    //cpu.setText("相手の手はグーです");
+                    cpu.setImageResource(R.drawable.goo)
                     result.text= "あなたの勝ちです"
                     result.setTextColor(Color.parseColor("#FF0000"))
                 }
                 1 ->{
-                    cpu.text = "相手の手はチョキです"
+                    //cpu.setText ("相手の手はチョキです");
+                    cpu.setImageResource(R.drawable.choki)
                     result.text= "あなたの負けです"
                     result.setTextColor(Color.parseColor("#f44336"))
                 }
                 2 ->{
-                    cpu.text = "相手の手はパーです"
+                    //cpu.setText("相手の手はパーです");
+                    cpu.setImageResource(R.drawable.paa)
                     result.text= "引き分けです"
                     result.setTextColor(Color.parseColor("#2196f3"))
                 }
